@@ -14,6 +14,7 @@ while True:
         msg = msg.decode()
         if msg in 'q':
             print("클라이언트와의 연결을 종료합니다.")
+            client.close()
             break
         else:
             for i in range(0, len(msg)+1):
@@ -42,4 +43,3 @@ while True:
             result = str(result)
             client.send(result.encode()) 
     client.close()
-    exit()

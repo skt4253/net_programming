@@ -11,5 +11,5 @@ while True:
     msg = client.recv(1024)
     print(msg.decode())
     msg = 20191521
-    client.send(msg.to_bytes(2, 'big'))
+    client.send(msg.to_bytes(4, 'big'))
     client.close()
