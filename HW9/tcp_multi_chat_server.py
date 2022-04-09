@@ -36,4 +36,3 @@ while True:
     sock, addr = s.accept()
     th = threading.Thread(target=handler, args=(sock, addr))
     th.start()
-    
